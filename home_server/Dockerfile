@@ -1,17 +1,17 @@
 # Base image
 FROM python:3.12-slim
 
-# Çalışma dizini
+# working directory
 WORKDIR /app
 
-# Kodları kopyala
+# copy codes
 COPY . /app
 
-# Gerekli bağımlılıkları yükle
+# Install the required dependencies
 RUN pip install --no-cache-dir psutil
 
 # Unbuffered Python
 ENV PYTHONUNBUFFERED=1
 
-# Script'i çalıştır
+# start the script
 CMD ["python3", "main.py"]
