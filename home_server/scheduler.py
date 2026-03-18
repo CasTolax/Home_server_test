@@ -1,22 +1,22 @@
-#Her dakika da bir kere json dosyasına lokal zamanı kayıt eder.
+#Every minute,record time and stroge with json,.
 import time
 import datetime
 import json
 from pathlib import Path
 
-time_of_log = Path("time_of_log.json")      # kaydın alınacağı yer
+time_of_log = Path("time_of_log.json")      # record
 
 def datenow_data():
 
     while True:
         local_time_now = {
-            "local_time": datetime.datetime.now().isoformat()           # yerel zamanı al ve iso formatına çevir
+            "local_time": datetime.datetime.now().isoformat()           # Get the local time, save it, and convert it to ISO format
         }
         
-        #Dosya ya yazdır
+        # write file
         with time_of_log.open("a",encoding="utf-8") as f:
             f.write(json.dumps(local_time_now,ensure_ascii=False)+"\n")
             print("kayıt ediliyor...")
-            time.sleep(60)                                             # 1 dakika bekle
+            time.sleep(60)                                             # wait a one minute
        
 datenow_data()
