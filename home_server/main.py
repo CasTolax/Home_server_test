@@ -1,4 +1,4 @@
-# loop burada gerçekleştirelecek.
+# loop starting
 import time
 
 def loop_sys():
