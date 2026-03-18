@@ -1,20 +1,19 @@
-#Kodun nasıl davrancağı, ne gibi durumlarda kapanıp,
-#açılacağı ve sistem açıldığında kontrol edilecek şeyler vb.
+#The code, what it does, and the printing process are all here. However, if desired, it can be integrated into your computer.
 
-import os           #işletim sisteminin dosya yolu ve dosya okuma-yazdırma
-import sys          #sisteme erişim için
-import datetime     #zaman bilgisi
-import time         #uyu,saniye tut işlemleri
-import json         #dosyalama ve veri depolama
-import pathlib      #dosya yolu,dosyalama işlemi-yazdırma-okuma
-import psutil       #Sistem bilgisi
+import os           #The operating system
+import sys          #access the system
+import datetime     #info date 
+import time         #loop, or etc
+import json         #file and stroge
+import pathlib      #read,write and delete file
+import psutil       #sistem info
 
-#yerel gerekli kütüphaneler
-from collettor import cpu_ctrl,net,hardware,_system   #veri 
+#required local libraries
+from collettor import cpu_ctrl,net,hardware,_system   #data 
 
-#import scheduler#depolama    #zaman -- #! -- SCHEDULER MODULU CORE MODULUNU CALISTIRMIYOR --
+ #-- #! -- SCHEDULER MODULE MAYBE İS NOT WORKİNG, PLEASE TESTİNG --
 
-# -- ÖRNEK --
+# -- EXAMPLE --
 #def deneme():
 #    cpu_data = cpu_ctrl()
 #    net_data = net()
@@ -22,10 +21,10 @@ from collettor import cpu_ctrl,net,hardware,_system   #veri
 #    system_data = _system()
 #    print(cpu_data,net_data,hardware_data,system_data)
 #deneme()
-# -- ÖRNEK --
+# -- EXAMPLE --
 
 
-# -- MODUL YOK ÖRNEK --
+# -- THERE İS NOT MODULE,SHOULD BE HAVE A PROBLEM --
 #def control_module():
 
 #        try:
