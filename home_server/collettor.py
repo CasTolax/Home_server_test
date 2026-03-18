@@ -1,47 +1,47 @@
-#Veriler burada toplanıp işlenecek.
-#import datetime  -- opsiyonel
+#VThe data will be processed here.
+#import datetime  -- optional
 import psutil
 
-#İŞLEMCİ DEĞERLERİ
-def cpu_ctrl(): #işlemci bilgi
+#CPU DATA
+def cpu_ctrl(): 
 
     return {
-        "cpu_use": psutil.cpu_percent(1),               # işlemci kullanım yüzdesi
-        "cpu_times": psutil.cpu_times(),                # işlemci saat hızı
-        "cpu_cores": psutil.cpu_freq(),                 # işlemci istatiksel gösterim
+        "cpu_use": psutil.cpu_percent(1),               # CPU PERCENT
+        "cpu_times": psutil.cpu_times(),                # CPU TİMES
+        "cpu_cores": psutil.cpu_freq(),                 # CPU frequency
         "cpu_sta": psutil.cpu_stats()._asdict()
     }
 
 cpu_ctrl()
 
-#İNTERNET DEĞERLERİ
-def net(): #internet bilgi
+#İNTERNET DATA
+def net(): 
 
     return {
-        "net_connection": psutil.net_connections(),     # internet değerleri
-        "_infoconnection": psutil.net_io_counters(),    # internet veri alış-veriş
-        "adress_connection": psutil.net_if_addrs()      # internet adres bilgisi
+        "net_connection": psutil.net_connections(),     # internet connections data
+        "_infoconnection": psutil.net_io_counters(),    # internet Internet data exchange
+        "adress_connection": psutil.net_if_addrs()      # internet adress data
     }
 
 net()
 
-#DONANIM DEĞERLERİ
-def hardware(): #donanım bilgi
+#HARDWARE DATA
+def hardware(): 
 
     return {
-        "hardware_temp":psutil.sensors_temperatures(),  #  Sıcaklık
-        "hardware_fan":psutil.sensors_fans(),           # Fan hızı ve marka
-        "hardware_batt":psutil.sensors_battery(),       # Güç-şarj
+        "hardware_temp":psutil.sensors_temperatures(),  #  hardware temp
+        "hardware_fan":psutil.sensors_fans(),           # fan speed
+        "hardware_batt":psutil.sensors_battery(),       # power or battery data
     }
 
 hardware()
 
-#SİSTEM DEĞERLERİ VE BİLGİ
-def _system(): #sistem bilgi
+#SYSTEM DATA
+def _system(): 
 
     return {
-        "sys_boot_time": psutil.boot_time(),            # Sistem boot süresi
-        "sys_user": psutil.users()                      # Kullanıcı bilgisi, örn -> isim
+        "sys_boot_time": psutil.boot_time(),            # System boot time
+        "sys_user": psutil.users()                      # Users data
     }
 
 _system()
